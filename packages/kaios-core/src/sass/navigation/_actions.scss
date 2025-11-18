@@ -1,0 +1,33 @@
+@use '../colors' as *;
+@use '../variables' as *;
+
+.action-bar {
+  height: $bottom-bar-height;
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 10px;
+  background-color: $color-surface-tertiary-light;
+
+  h5 {
+    flex: 1;
+    
+    &:first-child {
+      text-align: start;
+    }
+  
+    &:last-child {
+      text-align: end;
+    }
+  
+    &:nth-child(2) {
+      flex: 0 0 auto;
+      text-align: center;
+      text-transform: uppercase;
+    }
+  }
+}

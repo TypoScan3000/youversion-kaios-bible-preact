@@ -1,0 +1,12 @@
+dist/
+build-output/
+node_modules/
+.yarn/
+*.min.js
+*.bundle.js
+**/dist/**
+**/build/**
+**/*.legacy.*.js
+**/*.polyfills.*.js
+**/packages/*/dist/**
+**/apps/*/dist/** 

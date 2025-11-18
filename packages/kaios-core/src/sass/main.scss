@@ -1,0 +1,349 @@
+@use 'colors' as *;
+@use 'variables' as *;
+@use 'navigation/tabs';
+@use 'navigation/actions';
+@use 'menus/select-list';
+@use 'bible';
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  max-width: 100%;
+  height: 100vh;
+  /* 10px is KaiOS 3.0 default font size. Setting it here for viewing in browser. */
+  font-size: 10px;
+  overflow: hidden;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  font-family: 'Open Sans', 'Noto Sans', sans-serif;
+  font-size: 1rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#app {
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/** KaiOS 3.0 Defaults (for testing in browser) */
+h1 {
+  font-size: 17px;
+  font-weight: 400;
+}
+h2 {
+  font-size: 17px;
+  font-weight: 600;
+}
+h3 {
+  font-size: 14px;
+  font-weight: 400
+}
+h4 {
+  font-size: 14px;
+  font-weight: 400;
+}
+h5 {
+  font-size: 14px;
+  font-weight: 600;
+}
+p {
+  font-size: 17px;
+  font-weight: 400;
+
+  .pri {
+    font-size: 17px;
+    font-weight: 400;
+  }
+  .sec {
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .thi { 
+    font-size: 12px;
+    font-weight: 400;
+  }
+  .link {
+    font-size: 17px;
+    font-weight: 700;
+  }
+  .btn {
+    font-size: 17px;
+    font-weight: 400;
+  }
+}
+ul {
+  font-size: 17px;
+  font-weight: 400;
+}
+
+main {
+  overflow-x: scroll;
+  overflow-y: auto;
+  flex: 1;
+  position: relative;
+
+  &:focus {
+    outline: none;
+  }
+
+  &.contained {
+    padding-inline: 10px;
+    padding-block-start: 10px;
+  }
+}
+
+header {
+  // z-index: 9999;
+  height: $top-bar-height;
+  background-color: $color-surface-tertiary-light;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-sizing: border-box;
+
+  .title {
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .icon svg {
+    fill: $color-gray-40;
+  }
+
+  &.solo {
+    justify-content: center;
+  }
+}
+
+
+.book-chapter {
+  font-size: 18px;
+}
+
+.version {
+  font-size: 14px;
+}
+
+
+
+
+.chapter-item {
+  padding: 15px 10px;
+  font-size: 16px;
+}
+
+.footer-nav-item {
+  font-size: 14px;
+  padding: 10px;
+}
+
+/* Touch-friendly improvements */
+.footer-nav-item, .chapter-item, .close-picker {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+.book-chapter {
+  font-size: 16px;
+  flex: 1;
+}
+
+.footer-nav {
+  z-index: 9999;
+  position: relative;
+  width: 100%;
+  background-color: pink;
+}
+.footer-nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  height: $bottom-bar-height;
+}
+
+
+
+/* Footer navigation styling */
+.footer-nav-item {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  font-size: 12px;
+  cursor: pointer;
+  line-height: 1.2;
+  transform: translateY(-4px);
+}
+
+.footer-nav-item:hover {
+  background-color: rgba(0,0,0,0.1);
+}
+
+
+
+.menu-container {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  max-width: 90%;
+  margin: 0 auto;
+
+  > * {
+    margin-bottom: 1rem;
+  }
+
+  > *:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.menu-item {
+  background-color: #3498db;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.2s ease;
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  &.active {
+    background-color: #2980b9;
+    box-shadow: 0 0 0 2px #fff, 0 0 0 4px #2980b9;
+    transform: scale(1.02);
+  }
+}
+
+.daily-verse-container, .language-container {
+  padding: 1rem;
+  text-align: center;
+
+  p {
+    margin-bottom: 2rem;
+    color: #666;
+  }
+}
+
+.language-list {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+
+  > * {
+    margin-bottom: 1rem;
+  }
+
+  > *:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.language-item {
+  @extend .menu-item;
+  margin: 0;
+}
+.book-picker {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: #fff;
+  z-index: 1000;
+  display: none;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  padding: 0;
+  margin: 0;
+  overflow-y: auto;
+}
+.book-picker.show {
+  display: flex;
+}
+
+.segmented-control {
+  display: flex !important;
+  flex-direction: row !important;
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.segment-btn {
+  flex: 1;
+  padding: 10px 0;
+  border: none;
+  background: none;
+  color: #333;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.segment-btn.active {
+  background: #2c3e50;
+  color: #fff;
+}
+
+.book-list {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.book-item {
+  display: block;
+  width: 100%;
+  padding: 14px $list-item-horizontal-padding;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+  font-size: 16px;
+  color: #222;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.book-item:last-child {
+  border-bottom: none;
+}
+
+.book-item:hover, .book-item:active, .book-item:focus {
+  background: #f2f2f2;
+}
+
+.menu-list-item {
+  padding: 0.5rem $list-item-horizontal-padding;
+  text-align: center;
+}

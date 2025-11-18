@@ -1,0 +1,21 @@
+{
+  "extends": "tsconfig/tsconfig.kaios_2.json",
+  "compilerOptions": {
+    "paths": {
+      "@kaios-bible/core": ["../packages/kaios-core/src"],
+      "@kaios-bible/core/*": ["../packages/kaios-core/src/*"],
+      "@kaios-bible/generators": ["../packages/generators/src"],
+      "@kaios-bible/generators/*": ["../packages/generators/src/*"],
+      "@kaios-bible/types": ["../packages/types"],
+      "@kaios-bible/types/*": ["../packages/types/*"],
+    }
+  },
+  "include": [
+    ".",
+    "vite-env.d.ts",
+    "../packages/kaios-core/src",
+    "../packages/generators/src",
+    "../packages/types",
+  ],
+  "exclude": ["dist", "build", "node_modules", "**/*.test.*"]
+}

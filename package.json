@@ -1,0 +1,51 @@
+{
+  "name": "kaios-bible",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "private": true,
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "yarn workspace @kaios-bible/dev dev",
+    "build": "turbo run build:kaios2 build:jio build:kaios3",
+    "build:kaios2": "turbo run build:kaios2",
+    "build:jio": "turbo run build:jio",
+    "build:kaios3": "turbo run build:kaios3",
+    "lint": "turbo run lint",
+    "lint:fix": "turbo run lint:fix",
+    "typecheck": "turbo run typecheck",
+    "validate": "turbo run lint typecheck test:run",
+    "validate:ci": "turbo run lint typecheck",
+    "test": "turbo run test",
+    "test:ui": "turbo run test:ui",
+    "test:run": "turbo run test:run",
+    "changeset": "changeset",
+    "version-apps": "changeset version"
+  },
+  "devDependencies": {
+    "@changesets/cli": "2.29.5",
+    "@preact/preset-vite": "2.10.2",
+    "@testing-library/preact": "3.2.4",
+    "@types/core-js": "2.5.8",
+    "@types/node": "24.0.14",
+    "@types/terser": "3.12.0",
+    "@vitejs/plugin-legacy": "7.1.0",
+    "@vitest/browser": "3.2.4",
+    "@vitest/ui": "3.2.4",
+    "@youversion/eslint-config-typescript": "3.0.0",
+    "cheerio": "1.1.2",
+    "eslint": "8.57.1",
+    "http-server": "14.1.1",
+    "jest": "30.0.5",
+    "playwright": "1.55.1",
+    "prettier": "3.6.2",
+    "sass": "1.89.2",
+    "terser": "5.43.1",
+    "turbo": "2.5.5",
+    "typescript": "5.8.3",
+    "vite": "7.0.5",
+    "vitest": "3.2.4"
+  },
+  "packageManager": "yarn@4.9.2"
+}

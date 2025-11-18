@@ -1,0 +1,129 @@
+$jesus-words-red: #d53636;
+
+bible-text,
+votd-text, #bibleText {
+  font-size: 17px;
+  line-height: 1.4;
+}
+
+#bibleText {
+  display: block;
+
+  header {
+    display: none;
+    justify-content: space-between;
+    margin-bottom: 0.5em;
+  }
+
+  .ref {
+    font-weight: bold;
+  }
+
+  .abbr {
+    background: #f0f0f0;
+    border-radius: 6px;
+    padding: 0.2em 0.5em;
+    font-size: 0.9em;
+  }
+
+  .error {
+    color: red;
+  }
+
+  
+
+  /**
+   * These are the YV-formatted html class names.
+   */
+  .chapter {
+    -webkit-font-smoothing: subpixel-antialiased;
+
+    > div.label {
+      display: none;
+    }
+
+    .p {
+      margin-block-end: 10px;
+    }
+
+    .sp {
+      font-style: italic;
+      opacity: 0.6;
+    }
+
+    .wj {
+      color: $jesus-words-red;
+    }
+
+    /** Verse number */
+    .verse {
+      .label {
+        vertical-align: super;
+        font-size: 0.6rem;
+        opacity: 0.5;
+        margin-inline-end: 2px;
+      }
+    }
+
+    .note {
+      .body {
+        display: none;
+        font-size: 0.8rem;
+        padding: 8px;
+        position: absolute;
+        background-color: #1e3489;
+        z-index: 10;
+        left: 0;
+
+        .fr {
+          color: #5c82e9;
+          font-size: small;
+        }
+
+        /** Hebrew */
+        .ft {
+          .wh {
+            font-family: sans-serif;
+          }
+        }
+      }
+
+      .label:hover ~ .body {
+        display: block;
+      }
+    }
+
+    // Hide footnotes
+    .footnote,
+    [class*="footnote"],
+    [id*="footnote"],
+    .note,
+    .fr,
+    .ft {
+      display: none !important;
+    }
+
+    // Highlight for daily verse navigation
+    .highlight-verse {
+      background-color: #fff3cd;
+      border-radius: 4px;
+      padding: 4px;
+      transition: all 0.3s ease;
+    }
+  }
+}
+
+// Daily verse highlight section
+.highlighted-verse {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-left: 4px solid #007bff;
+  border-radius: 4px;
+
+  h3 {
+    margin: 0 0 10px 0;
+    color: #007bff;
+    font-size: 16px;
+  }
+}

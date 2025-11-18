@@ -1,0 +1,9 @@
+dist/
+build/
+*.min.js
+*.bundle.js
+**/*.legacy.*.js
+**/*.polyfills.*.js
+**/dist/**
+**/build/**
+node_modules/ 

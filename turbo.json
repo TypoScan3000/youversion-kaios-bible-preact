@@ -1,0 +1,50 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "globalDependencies": ["**/.env.*local"],
+  "tasks": {
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**"]
+    },
+    "build:kaios2": {
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**"]
+    },
+    "build:jio": {
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**"]
+    },
+    "build:kaios3": {
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**"]
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "lint": {
+      "outputs": []
+    },
+    "lint:fix": {
+      "outputs": []
+    },
+    "typecheck": {
+      "outputs": []
+    },
+    "validate": {
+      "dependsOn": ["lint", "typecheck", "test:run"]
+    },
+    "test": {
+      "dependsOn": ["^build"],
+      "outputs": ["coverage/**"]
+    },
+    "test:run": {
+      "dependsOn": ["^build"],
+      "outputs": ["coverage/**"]
+    },
+    "test:ui": {
+      "dependsOn": ["^build"],
+      "cache": false
+    }
+  }
+} 

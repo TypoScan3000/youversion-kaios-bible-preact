@@ -1,0 +1,45 @@
+{
+  "name": "@kaios-bible/core",
+  "private": true,
+  "version": "0.0.1",
+  "main": "src/index.tsx",
+  "scripts": {
+    "dev": "vite",
+    "preview": "vite preview",
+    "lint": "eslint src/",
+    "lint:fix": "eslint src/ --fix",
+    "typecheck": "tsc -p tsconfig.kaios_3.json --noEmit",
+    "validate": "yarn lint && yarn typecheck && yarn test:run",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:run": "vitest run"
+  },
+  "dependencies": {
+    "fflate": "0.8.2",
+    "js-cookie": "3.0.5",
+    "preact": "10.26.9"
+  },
+  "devDependencies": {
+    "@preact/preset-vite": "2.10.2",
+    "@testing-library/preact": "3.2.4",
+    "@types/core-js": "2.5.8",
+    "@types/js-cookie": "^3.0.6",
+    "@types/node": "24.0.14",
+    "@types/terser": "3.12.0",
+    "@vitejs/plugin-legacy": "7.1.0",
+    "@vitest/browser": "3.2.4",
+    "@vitest/ui": "3.2.4",
+    "@youversion/eslint-config-typescript": "3.0.0",
+    "cheerio": "1.1.2",
+    "eslint": "8.57.1",
+    "http-server": "14.1.1",
+    "playwright": "1.55.1",
+    "prettier": "3.6.2",
+    "sass": "1.89.2",
+    "terser": "5.43.1",
+    "typescript": "5.8.3",
+    "vite": "7.0.5",
+    "vitest": "3.2.4"
+  },
+  "packageManager": "yarn@4.9.2"
+}

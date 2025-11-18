@@ -1,0 +1,11 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.kaios_2.tsbuildinfo",
+    "target": "ES5",
+    "lib": ["ES5", "DOM", "DOM.Iterable"],
+    "downlevelIteration": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true
+  }
+}

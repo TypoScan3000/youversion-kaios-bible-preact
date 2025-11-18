@@ -1,0 +1,46 @@
+{
+  "name": "@kaios-bible/english",
+  "private": true,
+  "version": "0.0.2",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build:kaios2": "vite build --config vite.config.kaios2.ts",
+    "build:jio": "vite build --config vite.config.jio.ts",
+    "build:kaios3": "vite build --config vite.config.kaios3.ts",
+    "build": "yarn build:kaios2 && yarn build:jio && yarn build:kaios3",
+    "serve": "http-server -p 8080 -c-1 dist",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "typecheck": "tsc --noEmit",
+    "validate": "yarn lint && yarn typecheck"
+  },
+  "dependencies": {
+    "fflate": "0.8.2",
+    "preact": "10.26.9"
+  },
+  "devDependencies": {
+    "@kaios-bible/core": "workspace:*",
+    "@kaios-bible/generators": "workspace:*",
+    "@kaios-bible/types": "workspace:*",
+    "@preact/preset-vite": "2.10.2",
+    "@testing-library/preact": "3.2.4",
+    "@types/core-js": "2.5.8",
+    "@types/node": "24.0.14",
+    "@types/terser": "3.12.0",
+    "@vitejs/plugin-legacy": "7.1.0",
+    "@vitest/browser": "3.2.4",
+    "@vitest/ui": "3.2.4",
+    "@youversion/eslint-config-typescript": "3.0.0",
+    "cheerio": "1.1.2",
+    "eslint": "8.57.1",
+    "http-server": "14.1.1",
+    "playwright": "1.55.1",
+    "prettier": "3.6.2",
+    "sass": "1.89.2",
+    "terser": "5.43.1",
+    "typescript": "5.8.3",
+    "vite": "7.0.5",
+    "vitest": "3.2.4"
+  }
+}

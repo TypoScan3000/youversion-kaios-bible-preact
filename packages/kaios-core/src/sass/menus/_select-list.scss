@@ -1,0 +1,68 @@
+@use '../colors' as *;
+
+.select-list {
+  margin: 0;
+  padding: 10px 0;
+  list-style: none;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+
+  .item {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    &.active {
+      background-color: $color-gray-25;
+      color: $color-text-dark;
+    }
+
+    &:focus,
+    &:focus-visible {
+      outline: none;
+    }
+  }
+}
+
+.select-list.vertical {
+  text-align: center;
+
+  .item {
+    display: block;
+    padding: 0.5rem;
+    border-bottom: 1px solid $color-gray-20;
+  }
+}
+
+.select-list.grid {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 4.5px;
+
+  .item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    border: 1px solid $color-gray-25;
+    border-radius: 5px;
+    margin: 4.5px;
+  }
+
+  &.columns-4 {
+    .item {
+      max-width: 48px;
+      width: calc((100% - 36px) / 4); // Responsive width: (100% - total margins) / 4 columns
+      height: 48px;
+    }
+  }
+
+  &.columns-5 {
+    .item {
+      max-width: 36px;
+      width: calc((100% - 36px) / 5); // Responsive width: (100% - total margins) / 5 columns
+      height: 36px;
+    }
+  }
+}
+
