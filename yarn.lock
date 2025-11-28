@@ -2123,12 +2123,6 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@kaios-bible/offline-data@workspace:packages/offline-data":
-  version: 0.0.0-use.local
-  resolution: "@kaios-bible/offline-data@workspace:packages/offline-data"
-  languageName: unknown
-  linkType: soft
-
 "@kaios-bible/types@workspace:*, @kaios-bible/types@workspace:packages/types":
   version: 0.0.0-use.local
   resolution: "@kaios-bible/types@workspace:packages/types"
@@ -7706,6 +7700,12 @@ __metadata:
   checksum: 10c0/3c47814fdc64842ae3d5a74bc9d06bdd8d21563c04d9939bf6716a9c00596a4ebc342552f8934013d1ec991c74e3671b26710a0c51815f0b603795605ab6b2c9
   languageName: node
   linkType: hard
+
+"offline-data@workspace:packages/offline-data":
+  version: 0.0.0-use.local
+  resolution: "offline-data@workspace:packages/offline-data"
+  languageName: unknown
+  linkType: soft
 
 "once@npm:^1.3.0":
   version: 1.4.0
