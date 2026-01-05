@@ -5,8 +5,8 @@
     "packages/*"
   ],
   "private": true,
-  "license": "MIT",
   "version": "0.0.1",
+  "license": "MIT",
   "scripts": {
     "dev": "yarn workspace @kaios-bible/dev dev",
     "build": "turbo run build:kaios2 build:jio build:kaios3",
