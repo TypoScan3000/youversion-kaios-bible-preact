@@ -5,6 +5,7 @@
     "packages/*"
   ],
   "private": true,
+  "license": "MIT",
   "version": "0.0.1",
   "scripts": {
     "dev": "yarn workspace @kaios-bible/dev dev",

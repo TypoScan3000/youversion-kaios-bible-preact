@@ -52,3 +52,9 @@ To add a new bundle:
 ### KaiOS 3
 
 - One `manifest.webmanifest` per locale
+
+## Licensing
+
+- Code in this repository is licensed under MIT (see `LICENSE`).
+- Offline Bible data includes CC-BY-SA 4.0 bundles (IDs 1883, 1884, 1885, 1895, 1898, 1899, 1910, 1911, 1912, 1979, 1980, 2743) and Public Domain bundles (IDs 206, 819). See `NOTICE` for details and attribution requirements.
+- App icons and images in `apps/*/public/icons` and `apps/*/public/resources` are project assets and are not licensed for reuse without permission.

@@ -26,3 +26,5 @@ As of November 2025 the bible zips are currently not optimized. There are severa
 | 1979 | IRV-ASM | Assamese | CC-BY-SA-4.0 |
 | 1980 | IRV-HIN | Hindi | CC-BY-SA-4.0 |
 | 2743 | IRV-ORY | Oriya | CC-BY-SA-4.0 |
+
+See the repository `NOTICE` file for attribution details and licensing requirements for each bundle.

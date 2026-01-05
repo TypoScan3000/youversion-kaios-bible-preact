@@ -1,0 +1,13 @@
+KaiOS Bible App - Licensing Notice
+
+Code
+- The source code in this repository is licensed under the MIT License (see LICENSE).
+
+Bible Data
+- CC-BY-SA 4.0 bundles (attribution and ShareAlike required): 1883 (IRV Bengali), 1884 (IRV Punjabi), 1885 (IRV Urdu), 1895 (IRV Telugu), 1898 (IRV Kannada), 1899 (IRV Tamil), 1910 (IRV Marathi), 1911 (IRV Gujarati), 1912 (IRV Malayalam), 1979 (IRV Assamese), 1980 (IRV Hindi), 2743 (IRV Odia). These are Indian Revised Version translations © Bridge Connectivity Solutions Pvt. Ltd., published on VachanOnline and made available via vachanonline.com / VachanGo, and licensed under Creative Commons Attribution-ShareAlike 4.0 International. See individual `_version.json` entries inside each bundle for the exact attribution text; 1980 also references freebiblesindia.com and eBible.org under CC-BY-SA 4.0.
+- Public Domain bundles: 206 (WEBUS) courtesy of eBible.org; 819 (Hindi Holy Bible) © Your organization, released as Public Domain for this project. If you redistribute, retain any attribution supplied by the source.
+
+Other Assets
+- App icons and images in apps/*/public/icons and apps/*/public/resources are project assets. No separate license is granted beyond what is needed to build and run the apps; obtain permission before reuse.
+
+If you contribute or redistribute, please keep this notice together with the appropriate files so downstream users understand the mixed licensing.*** End Patch**уап to=functions.apply_patch буниң JSON format. Need plain string. redo.မျ
