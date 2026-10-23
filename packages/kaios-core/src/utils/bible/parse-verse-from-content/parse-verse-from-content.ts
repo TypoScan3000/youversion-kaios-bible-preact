@@ -36,10 +36,10 @@ interface ParseVerseParams {
  * // Returns metadata only `{ allVerseUsfms: ['GEN.1.1', 'GEN.1.2', ...etc], totalVerses: 31, }`
  *
  * parseVerseFromContent({fullContent: '<html>HTML for Genesis 1</html>' , usfms: 'GEN.1.1+GEN.1.2+GEN.1.3'})
- * // Returns text and html for Genesis 1:1-3, and the metatdata for Genesis 1.
+ * // Returns text and html for Genesis 1:1-3, and the metadata for Genesis 1.
  *
  * parseVerseFromContent({fullContent: '<html>HTML for Genesis 1</html>' , usfms: ['GEN.1.1','GEN.1.2', 'GEN.1.3']})
- * // Returns text and html for Genesis 1:1-3, and the metatdata for Genesis 1.
+ * // Returns text and html for Genesis 1:1-3, and the metadata for Genesis 1.
  * ```
  */
 export function parseVerseFromContent({ usfms, fullContent }: ParseVerseParams): VerseContent {
